@@ -1,7 +1,7 @@
 {
-  "name": "serverless-plugin-warmup",
-  "version": "8.3.0",
-  "description": "Keep your lambdas warm during winter.",
+  "name": "@andreluizgomes/serverless-warmup",
+  "version": "1.0.0",
+  "description": "Serverless plugin to keep your lambdas warm and reduce cold starts",
   "main": "src/index.js",
   "scripts": {
     "prepare": "husky install",
@@ -10,11 +10,11 @@
     "test": "jest test",
     "test-with-coverage": "jest --coverage --collectCoverageFrom=src/**/*.js test"
   },
-  "author": "Juanjo Diaz <juanjo.diazmo@gmail.com>",
+  "author": "André Luiz Goems <andreluizsgf@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juanjoDiaz/serverless-plugin-warmup.git"
+    "url": "git+https://github.com/andreluizsgf/serverless-warmup.git"
   },
   "keywords": [
     "serverless plugin warm up lambdas",
@@ -26,9 +26,9 @@
     "lambda cold"
   ],
   "bugs": {
-    "url": "https://github.com/juanjoDiaz/serverless-plugin-warmup/issues"
+    "url": "https://github.com/andreluizsgf/serverless-warmup/issues"
   },
-  "homepage": "https://github.com/juanjoDiaz/serverless-plugin-warmup",
+  "homepage": "https://github.com/andreluizsgf/serverless-warmup",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^8.5.0",
