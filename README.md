@@ -613,15 +613,3 @@ Help us making this plugin better and future-proof.
 ## License
 
 This software is released under the MIT license. See [the license file](LICENSE) for more details.
-
-[serverless-badge]: http://public.serverless.com/badges/v3.svg
-[serverless-badge-url]: http://www.serverless.com
-[npm-version-badge]: https://badge.fury.io/js/serverless-plugin-warmup.svg
-[npm-version-badge-url]: https://www.npmjs.com/package/serverless-plugin-warmup
-[npm-downloads-badge]: https://img.shields.io/npm/dm/serverless-plugin-warmup.svg
-[coveralls-badge]: https://coveralls.io/repos/juanjoDiaz/serverless-plugin-warmup/badge.svg?branch=main
-[coveralls-badge-url]: https://coveralls.io/r/juanjoDiaz/serverless-plugin-warmup?branch=main
-
-## Acknowledgements
-
-Thanks to [Fidel](https://github.com/fidelLimited) who initially developed this plugin.
