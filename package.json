@@ -1,6 +1,6 @@
 {
   "name": "@andreluizsgf/serverless-warmup",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Serverless plugin to keep your lambdas warm and reduce cold starts",
   "main": "src/index.js",
   "scripts": {
