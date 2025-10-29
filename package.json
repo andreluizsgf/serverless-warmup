@@ -29,6 +29,9 @@
     "url": "https://github.com/andreluizsgf/serverless-warmup/issues"
   },
   "homepage": "https://github.com/andreluizsgf/serverless-warmup",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {},
   "devDependencies": {
     "eslint": "^8.5.0",
