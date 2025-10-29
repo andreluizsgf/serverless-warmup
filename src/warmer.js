@@ -207,9 +207,20 @@ export const warmUp = async (event, context) => {
   await fs.mkdir(handlerFolder, { recursive: true });
   await fs.writeFile(path.join(handlerFolder, 'index.js'), warmUpFunction);
 
+  // Create package.json to enable ES modules
+  const packageJson = {
+    type: 'module',
+    dependencies: {},
+  };
+
   if (tracing) {
-    await execAsync('npm init -y', { cwd: handlerFolder });
-    await execAsync('npm install --save aws-xray-sdk-core', { cwd: handlerFolder });
+    packageJson.dependencies['aws-xray-sdk-core'] = '^3.0.0';
+  }
+
+  await fs.writeFile(path.join(handlerFolder, 'package.json'), JSON.stringify(packageJson, null, 2));
+
+  if (tracing) {
+    await execAsync('npm install', { cwd: handlerFolder });
   }
 }
 

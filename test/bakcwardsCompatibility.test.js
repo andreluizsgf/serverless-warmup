@@ -98,7 +98,7 @@ describe('Backward compatibility', () => {
 
       expect(fs.mkdir).toHaveBeenCalledTimes(1);
       expect(fs.mkdir).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default'), { recursive: true });
-      expect(fs.writeFile).toHaveBeenCalledTimes(1);
+      expect(fs.writeFile).toHaveBeenCalledTimes(2);
       expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
     });
 
@@ -128,7 +128,7 @@ describe('Backward compatibility', () => {
 
       expect(fs.mkdir).toHaveBeenCalledTimes(1);
       expect(fs.mkdir).toHaveBeenCalledWith(path.join('', '.warmup', 'default'), { recursive: true });
-      expect(fs.writeFile).toHaveBeenCalledTimes(1);
+      expect(fs.writeFile).toHaveBeenCalledTimes(2);
       expect(fs.writeFile).toHaveBeenCalledWith(path.join('', '.warmup', 'default', 'index.js'), expect.anything());
     });
   });

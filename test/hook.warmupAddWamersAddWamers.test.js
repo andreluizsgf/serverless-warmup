@@ -93,7 +93,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
     expect(fs.mkdir).toHaveBeenNthCalledWith(2, path.join('testPath', '.warmup', 'secondary'), { recursive: true });
     expect(fs.mkdir).toHaveBeenNthCalledWith(3, path.join('testPath', '.warmup', 'tertiary'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(3);
+    expect(fs.writeFile).toHaveBeenCalledTimes(6);
     expect(fs.writeFile).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
     expect(fs.writeFile).toHaveBeenNthCalledWith(2, path.join('testPath', '.warmup', 'secondary', 'index.js'), expect.anything());
     expect(fs.writeFile).toHaveBeenNthCalledWith(3, path.join('testPath', '.warmup', 'tertiary', 'index.js'), expect.anything());
@@ -183,7 +183,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
     expect(plugin.serverless.service.functions.warmUpPluginSecondary).toBeUndefined();
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
   });
 
@@ -273,7 +273,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -310,7 +310,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -371,7 +371,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -435,7 +435,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -473,7 +473,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -511,7 +511,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -549,7 +549,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -587,7 +587,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -625,7 +625,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -663,7 +663,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -701,7 +701,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -739,7 +739,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -777,7 +777,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -815,7 +815,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -853,7 +853,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -891,7 +891,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -929,7 +929,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -967,7 +967,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -1005,7 +1005,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -1043,7 +1043,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -1081,7 +1081,7 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
       .toEqual(getExpectedFunctionConfig());
     expect(fs.mkdir).toHaveBeenCalledTimes(1);
     expect(fs.mkdir).toHaveBeenNthCalledWith(1, path.join('testPath', '.warmup', 'default'), { recursive: true });
-    expect(fs.writeFile).toHaveBeenCalledTimes(1);
+    expect(fs.writeFile).toHaveBeenCalledTimes(2);
     expect(fs.writeFile).toHaveBeenCalledWith(path.join('testPath', '.warmup', 'default', 'index.js'), expect.anything());
 
     const functionTester = new GeneratedFunctionTester(fs.writeFile.mock.calls[0][1]);
@@ -1569,9 +1569,8 @@ describe('Serverless warmup plugin warmup:warmers:addWarmers:addWarmers hook', (
 
     expect(plugin.serverless.service.functions.warmUpPluginDefault)
       .toEqual(getExpectedFunctionConfig({ tracing: true }));
-    expect(exec).toHaveBeenCalledTimes(2);
-    expect(exec).toHaveBeenNthCalledWith(1, 'npm init -y', { cwd: path.join('testPath', '.warmup', 'default') }, expect.anything());
-    expect(exec).toHaveBeenNthCalledWith(2, 'npm install --save aws-xray-sdk-core', { cwd: path.join('testPath', '.warmup', 'default') }, expect.anything());
+    expect(exec).toHaveBeenCalledTimes(1);
+    expect(exec).toHaveBeenNthCalledWith(1, 'npm install', { cwd: path.join('testPath', '.warmup', 'default') }, expect.anything());
   });
 
   it('Should overide provider tracing setting if set up at the warmer config', async () => {
