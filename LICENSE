@@ -1,6 +1,7 @@
 MIT License
 
-Copyright (c) 2021 Juanjo Diaz
+Copyright (c) 2025 André Luiz dos Santos Gomes Filho
+Based on serverless-plugin-warmup by Juanjo Díaz (https://github.com/juanjoDiaz/serverless-plugin-warmup)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,5 +22,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Modifications by André Luiz dos Santos Gomes Filho (2025)
-Based on serverless-plugin-warmup by Juanjo Díaz
-Licensed under the MIT License
