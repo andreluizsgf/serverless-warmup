@@ -41,6 +41,7 @@ function getWarmerConfig(config, defaultOpts) {
       },
     memorySize: (config.memorySize !== undefined) ? config.memorySize : defaultOpts.memorySize,
     timeout: (config.timeout !== undefined) ? config.timeout : defaultOpts.timeout,
+    runtime: (config.runtime !== undefined) ? config.runtime : defaultOpts.runtime,
     environment: (config.environment !== undefined)
       ? config.environment
       : defaultOpts.environment,
