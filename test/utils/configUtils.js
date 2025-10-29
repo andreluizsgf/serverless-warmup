@@ -63,7 +63,6 @@ function getPluginUtils(options = {}) {
 
 function getExpectedLambdaClientConfig(options = {}) {
   return {
-    apiVersion: '2015-03-31',
     region: 'us-east-1',
     ...options,
   };
