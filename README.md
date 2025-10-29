@@ -1,10 +1,17 @@
 # Serverless WarmUp Plugin ♨
-[![Serverless][serverless-badge]](serverless-badge-url)
+
+<!-- [![Serverless][serverless-badge]](serverless-badge-url)
 [![npm version][npm-version-badge]][npm-version-badge-url]
 [![npm monthly downloads][npm-downloads-badge]][npm-version-badge-url]
 [![Node.js CI](https://github.com/juanjoDiaz/serverless-plugin-warmup/actions/workflows/on-push.yaml/badge.svg)](https://github.com/juanjoDiaz/serverless-plugin-warmup/actions/workflows/on-push.yaml)
 [![Coverage Status][coveralls-badge]][coveralls-badge-url]
-[![license](https://img.shields.io/npm/l/serverless-plugin-warmup.svg)](https://raw.githubusercontent.com/juanjoDiaz/serverless-plugin-warmup/main/LICENSE)
+[![license](https://img.shields.io/npm/l/serverless-plugin-warmup.svg)](https://raw.githubusercontent.com/juanjoDiaz/serverless-plugin-warmup/main/LICENSE) -->
+
+> 🚀 **Fork based on the original work by [Juanjo Díaz](https://github.com/juanjoDiaz/serverless-plugin-warmup)**  
+> This project reuses and adapts the source code from [`serverless-plugin-warmup/src`](https://github.com/juanjoDiaz/serverless-plugin-warmup/tree/main/src), while keeping the original MIT license.  
+> It was created to maintain compatibility, improve configuration flexibility, and simplify maintenance for modern projects using the **Serverless Framework**.
+
+---
 
 Keep your lambdas warm during winter.
 

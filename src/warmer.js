@@ -219,13 +219,13 @@ export const warmUp = async (event, context) => {
 function addWarmUpFunctionToService(service, warmerName, warmerConfig) {
   // eslint-disable-next-line no-param-reassign
   service.functions[`warmUpPlugin${capitalize(warmerName)}`] = {
-    description: `Serverless WarmUp Plugin (warmer "${warmerName}")`,
+    description: `Serverless WarmUp (warmer "${warmerName}")`,
     events: warmerConfig.events,
     handler: warmerConfig.pathHandler.split(path.sep).join(path.posix.sep),
     memorySize: warmerConfig.memorySize,
     name: warmerConfig.name,
     ...(warmerConfig.architecture ? { architecture: warmerConfig.architecture } : {}),
-    runtime: 'nodejs20.x',
+    runtime: warmerConfig.runtime,
     package: warmerConfig.package,
     timeout: warmerConfig.timeout,
     ...(Object.keys(warmerConfig.environment).length

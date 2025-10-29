@@ -158,6 +158,7 @@ function getConfigsByWarmer({ service, classes }, stage) {
       .reduce((obj, k) => ({ ...obj, [k]: undefined }), {}),
     verbose: true,
     prewarm: false,
+    runtime: 'nodejs20.x',
   });
 
   const functionDefaultOpts = {
